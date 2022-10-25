@@ -1,4 +1,4 @@
-import { Envelope } from "phosphor-react";
+import { Envelope, Lock } from "phosphor-react";
 import { Button } from "./components/Button";
 import { Heading } from "./components/Heading";
 import { Text } from "./components/Text";
@@ -10,7 +10,7 @@ function App() {
     <div className="w-full h-[100vh] bg-zinc-900 flex items-center justify-center">
       <div
         className="flex items-center justify-center flex-col mx-auto my-0
-      max-w-[500px] w-full bg-zinc-700 p-4 gap-2 rounded"
+      max-w-[400px] w-full bg-zinc-700 p-4 gap-2 rounded"
       >
         <Heading children="Ignite Lab" size="lg" />
         <Text
@@ -18,7 +18,7 @@ function App() {
           size="lg"
           className="block mb-2 "
         />
-        <div className="mb-2">
+        <div className="mb-2 w-full flex flex-col gap-4">
           <TextInput.Root>
             <TextInput.Icon>
               <Envelope />
@@ -27,11 +27,23 @@ function App() {
             <TextInput.Input
               type="email"
               id="email"
-              placeholder="Digite seu e-mail"
+              placeholder="izaiaslima356@gmail.com"
+            />
+          </TextInput.Root>
+
+          <TextInput.Root>
+            <TextInput.Icon>
+              <Lock />
+            </TextInput.Icon>
+
+            <TextInput.Input
+              type="password"
+              id="password"
+              placeholder="********"
             />
           </TextInput.Root>
         </div>
-        <Button children="Button view" />
+        <Button children="Entrar na plataforma" />
       </div>
     </div>
   );
